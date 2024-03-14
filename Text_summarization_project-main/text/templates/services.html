@@ -176,13 +176,14 @@
                       accept=".pdf, .doc, .docx"
                       onchange="handleFileSelect()"
                     />
+                    <span id="file-size-error" style="padding-left:3rem;color: red; display: none;">File size exceeds the limit of 1MB.</span>
                     <span class="file-name" id="file-name">No file choosen</span>
                     <div class="button1">
                       <div class="buttons">
-                        <button id="removebutton" onclick="removeFile()">
+                        <a  id="removebutton" onclick="removeFile()">
                           Remove File
-                        </button>
-                        <button id="submitButton">Submit</button>
+                        </a>
+                        <button type="submit" id="submitButton">Submit</button>
                       </div>
                     </div>
                   </div>

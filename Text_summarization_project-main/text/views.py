@@ -24,7 +24,7 @@ def summarize(request):
             # Check file extension and extract text accordingly
             if file_extension.lower() == '.pdf':
                 input_text = extract_text_from_pdf(uploaded_file)
-            elif file_extension.lower() == '.docx':
+            elif file_extension.lower() in ('.doc', '.docx'):
                 input_text = extract_text_from_docx(uploaded_file)
             else:
                 return HttpResponse("Unsupported file format")
